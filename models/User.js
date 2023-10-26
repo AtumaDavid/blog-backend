@@ -17,6 +17,13 @@ const userSchema = new Schema({
     required: true,
     minlength: 6,
   },
+  blogs: [
+    {
+      type: mongoose.Types.ObjectId,
+      ref: "Blog", //Blog controller --models
+      required: true,
+    },
+  ], //user can have multiple blog posts
 });
 
 export default mongoose.model("User", userSchema);

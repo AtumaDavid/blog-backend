@@ -3,12 +3,14 @@ import express from "express";
 import mongoose from "mongoose";
 import router from "./routes/user-routes";
 import dotenv from "dotenv";
+import blogRouter from "./routes/blog-routes";
 dotenv.config();
 
 const app = express();
 
 app.use(express.json());
 app.use("/api/user", router);
+app.use("/api/blog", blogRouter);
 
 mongoose
   .connect(process.env.CONNECTION_STRING)
