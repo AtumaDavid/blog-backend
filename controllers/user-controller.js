@@ -43,6 +43,7 @@ export const signUp = async (req, res, next) => {
   return res.status(201).json({ user });
 };
 
+//login
 export const login = async (req, res, next) => {
   const { email, password } = req.body;
   let existingUser;

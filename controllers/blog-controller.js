@@ -2,6 +2,9 @@ import mongoose from "mongoose";
 import Blog from "../models/Blog";
 import User from "../models/User";
 
+// "User" not same as "user"
+// "user" coming from Blog model "Blog.js"
+
 export const getAllBlogs = async (req, res, next) => {
   let blogs;
   try {
